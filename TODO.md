@@ -10,9 +10,6 @@
 ERROR, test=Required.Proto3.DurationProtoNanosWrongSign.JsonOutput: Should have failed to serialize, but didn't., request=goo.gle/debugproto    protobuf_payload: "\352\022\r\010\001\020\377\377\377\377\377\377\377\377\377\001" requested_output_format: JSON message_type: "protobuf_test_messages.proto3.TestAllTypesProto3" test_category: JSON_TEST, response=goo.gle/debugproto    json_payload: "{\"optionalDuration\":\"1.000000001s\"}"
 ```
 
-This (and the next) requires an additional check in durationToJson(), and probably a fix in durationFromMs().
-Also check timestampFromMs()
-
 
 ## duration same sign 2
 
