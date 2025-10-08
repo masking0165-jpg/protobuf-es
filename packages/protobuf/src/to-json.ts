@@ -545,6 +545,11 @@ function timestampToJson(val: Timestamp) {
       `cannot encode message ${val.$typeName} to JSON: nanos must not be negative`,
     );
   }
+  if (val.nanos > 999999999) {
+    throw new Error(
+      `cannot encode message ${val.$typeName} to JSON: nanos must not be greater than 99999999`,
+    );
+  }
   let z = "Z";
   if (val.nanos > 0) {
     const nanosStr = (val.nanos + 1000000000).toString().substring(1);
