@@ -21,7 +21,7 @@ import { protoInt64 } from "../proto-int64.js";
  * Create a google.protobuf.Duration message from a Unix timestamp in milliseconds.
  */
 export function durationFromMs(durationMs: number): Duration {
-  const seconds = Math.floor(durationMs / 1000);
+  const seconds = Math.round(durationMs / 1000);
   return create(DurationSchema, {
     seconds: protoInt64.parse(seconds),
     nanos: (durationMs - seconds * 1000) * 1000000,

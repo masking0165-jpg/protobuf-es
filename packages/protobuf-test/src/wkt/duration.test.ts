@@ -61,12 +61,12 @@ void suite("durationFromMs()", () => {
   void test("1020 ms", () => {
     const ts = durationFromMs(1020);
     assert.strictEqual(Number(ts.seconds), 1);
-    assert.strictEqual(ts.nanos, 20 * 1000000);
+    assert.strictEqual(ts.nanos, 20_000_000);
   });
   void test("-1070 ms", () => {
     const ts = durationFromMs(-1070);
-    assert.strictEqual(Number(ts.seconds), -2);
-    assert.strictEqual(ts.nanos, 930 * 1000000);
+    assert.strictEqual(Number(ts.seconds), -1);
+    assert.strictEqual(ts.nanos, -70_000_000);
   });
   void test("-1000 ms", () => {
     const ts = durationFromMs(-1000);

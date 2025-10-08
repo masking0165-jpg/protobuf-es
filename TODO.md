@@ -11,6 +11,7 @@ ERROR, test=Required.Proto3.DurationProtoNanosWrongSign.JsonOutput: Should have 
 ```
 
 This (and the next) requires an additional check in durationToJson(), and probably a fix in durationFromMs().
+Also check timestampFromMs()
 
 
 ## duration same sign 2
