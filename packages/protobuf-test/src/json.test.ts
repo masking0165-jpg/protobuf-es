@@ -496,6 +496,26 @@ void suite("JSON serialization", () => {
               "cannot encode message google.protobuf.Duration to JSON: nanos sign must match seconds sign",
           });
         });
+        void test("signed zero is disregarded", () => {
+          assert.doesNotThrow(() =>
+            toJson(
+              DurationSchema,
+              create(DurationSchema, {
+                seconds: protoInt64.parse(-1),
+                nanos: 0,
+              }),
+            ),
+          );
+          assert.doesNotThrow(() =>
+            toJson(
+              DurationSchema,
+              create(DurationSchema, {
+                seconds: protoInt64.parse(-1),
+                nanos: -0,
+              }),
+            ),
+          );
+        });
       });
     });
     testJson(TimestampSchema, {}, "1970-01-01T00:00:00Z");
