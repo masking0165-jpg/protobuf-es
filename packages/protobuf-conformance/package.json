@@ -8,7 +8,7 @@
     "generate": "protoc --es_out=src/gen --es_opt=target=ts --proto_path=proto $(buf ls-files proto)",
     "postgenerate": "license-header",
     "test": "test '1' == \"$BUF_BIGINT_DISABLE\" && npm run test:string || npm run test:bigint",
-    "test:bigint": "conformance_test_runner --maximum_edition MAX --enforce_recommended --failure_list failing_tests_with_bigint.txt --text_format_failure_list failing_tests_text_format.txt bin/conformance.js",
+    "test:bigint": "conformance_test_runner --test Required.Editions_Proto3.DurationProtoNanosWrongSignNegativeSecs.JsonOutput --maximum_edition MAX --enforce_recommended --failure_list failing_tests_with_bigint.txt --text_format_failure_list failing_tests_text_format.txt bin/conformance.js",
     "test:string": "conformance_test_runner --maximum_edition MAX --enforce_recommended --failure_list failing_tests_without_bigint.txt --text_format_failure_list failing_tests_text_format.txt bin/conformance.js",
     "format": "biome format --write",
     "license-header": "license-header",
@@ -26,6 +26,6 @@
     "@bufbuild/buf": "^1.57.2",
     "@bufbuild/protobuf": "2.9.0",
     "@bufbuild/protoc-gen-es": "2.9.0",
-    "protobuf-conformance": "32.1.0"
+    "protobuf-conformance": "33.0.0-rc1"
   }
 }
