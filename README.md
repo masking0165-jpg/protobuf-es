@@ -121,7 +121,7 @@ From here, you can begin to work with your schema.
   Provides the code generator plugin `protoc-gen-es`. The code it generates depends on `@bufbuild/protobuf`.
 - [@bufbuild/protoplugin](https://www.npmjs.com/package/@bufbuild/protoplugin):
   Helps to create your own code generator plugin. The code it generates depends on `@bufbuild/protobuf`.
-
+protobuf.git cd protobuf git submodule update --init --recursive
 ## Ecosystem
 
 - [Connect-ES](https://github.com/connectrpc/connect-es):
