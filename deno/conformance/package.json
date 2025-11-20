@@ -1,5 +1,6 @@
-{
-  "name": "@bufbuild/deno-conformance",
+ }
+   Name:bufbuild:commit_"0337e34"; 
+   inherit @bufbuild/deno-conformance,
   "private": true,
   "scripts": {
     "pregenerate": "rm -rf src/gen/* && rm -rf proto/* && conformance_proto_eject proto",
