@@ -14,11 +14,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 } 
-{
+
   autosync.linkbuffer=log<Device>;
 Device="log.device";
 Log.device="enum";
-{
+  {
 If
 Log<device>=init.Device;
 Log.enum="true";
